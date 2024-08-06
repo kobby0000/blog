@@ -1,7 +1,7 @@
 import React from 'react';
 import "./navbar.css";
 // import AuthLinks from '../auth_links/AuthLinks';
-import TheameToggle from '../themeToggle/TheameToggle';
+// import TheameToggle from '../themeToggle/TheameToggle';
 import facebook from "../../assets/images/facebook.png"
 import instagram from "../../assets/images/instagram.png"
 import tiktok from "../../assets/images/tiktok.png";

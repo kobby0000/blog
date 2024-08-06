@@ -2,8 +2,8 @@
 import {  
    createBrowserRouter,
   RouterProvider,
-  createRoutesFromElements,
-  Route
+  // createRoutesFromElements,
+  // Route
  } from "react-router-dom";
 import Layout from "./layouts/Layouts";
 
