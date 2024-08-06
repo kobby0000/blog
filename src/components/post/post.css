@@ -1,0 +1,19 @@
+#posts {
+    padding: 1px;
+    /* margin-top: 7rem; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.post_wrapper {
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+}

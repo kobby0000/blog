@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+ --head_font: 2rem;
+ --head_font2: 1.5rem;
+--primary_font: 14px;
+--primary_color: rgb(131, 14, 98);
+--bg_color:white;
+--bgsoft:#f0f0f0;
+--text_color: black;
+--transition: 300ms ease;
+--black:#181818;
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-align: left;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.2;
+  /* color: var(--grey_color); */
+  scroll-behavior: smooth;
+  font-size: 14px;
+  background-color: #f4f4f4;
+  /* padding: 1px 0///////////; */
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace,'Roboto' 'Raleway';
+}
+
+p {
+  font-size: var(--primary_font);
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  /* font-family: 'Raleway', sans-serif; */
+  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  font-style: italic;
+  display: block;
+  width: 100%;
+}
+
+.container {
+  max-width: 80%;
+  margin: auto;
+  /* background-color: rebeccapurple; */
+  color: var(--text_color);
+  padding-left: 80px;
+  padding-right: 80px;
+  overflow: hidden;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.text_primary_color {
+  color: var(--primary_color);
+}
+
+.btn {
+    color: #f4f4f4;
+    padding: 0.6rem 1.4rem;
+    border-radius: 5px;
+    transition: var(--transition);
+    background-color: var(--black);
+}
+
+.btn_category {
+  background-color:var(--primary_color);
+  color: var(--bgsoft);
+  font-size: 12px;
+  padding: 0.4rem 1rem;
+  font-weight: 400;
+  border-radius: 5px;
+  transition: var(--transition);
+}
+  
+.btn_category:hover,
+.btn_category:focus{
+  scale: 0.9;
+}
+
+@media screen and (max-width:1536px) {
+  .container {
+    max-width: 1366px;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .container {
+    max-width: 640px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width:640px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+
+
+

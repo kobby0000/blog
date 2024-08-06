@@ -1,0 +1,25 @@
+#errorpage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.errorpage_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.errorpage_wrapper a:hover,
+.errorpage_wrapper a:focus {
+    background-color: var(--bgsoft);
+    color: var(--black);
+    outline: 2px solid var(--black);
+}
+
+.errorpage_wrapper h2 {
+    margin-top: 1rem;
+}
