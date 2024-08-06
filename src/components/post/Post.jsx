@@ -34,7 +34,7 @@ const DummyPosts = [
 },
 {
   id: "4",
-  image: image1,
+  image: image2,
   category: "Politics",
   title:"This is the title of the first post",
   desc:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur tempore animi nemo laudantium est sint alias quidem neque odio molestiae.",

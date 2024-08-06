@@ -21,9 +21,9 @@ function Navbar() {
               </div>
             <ul className='nav_links'>
              {/* <TheameToggle /> */}
-                <li><a href="">Home</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">About</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Contact</a></li>
+                <li><a href="/">About</a></li>
             </ul>
             <div className="social">
                 <a href=""><img className='social_icon' src={facebook} alt="" /></a>
