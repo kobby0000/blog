@@ -1,0 +1,9 @@
+.btn_one {
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: var(--bgsoft);
+    background-color: var(--danger);
+    box-shadow: var(--box_shadow);
+    border: 1px solid #7d7d7d;
+    transition: var(--transition);
+}

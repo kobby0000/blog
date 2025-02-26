@@ -1,0 +1,22 @@
+#home {
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: center;
+}
+
+#home .right {
+    width: 30%;
+}
+
+#home .right h2{
+    border-top: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+    font-weight: 400;
+    padding: .5rem 0;
+    margin: 1.5rem 0;
+}
+
+#home .left {
+    width: 70%;
+}

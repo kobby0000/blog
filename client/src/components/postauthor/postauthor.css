@@ -1,0 +1,14 @@
+.post_author {
+    display: flex;
+    gap: 0.4rem;
+    align-items: flex-start;
+}
+
+.post_author img {
+    width: 30px;
+    height: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+
+}

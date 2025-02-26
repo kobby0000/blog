@@ -1,0 +1,49 @@
+
+#create_post {
+    margin: auto;
+    /* width: 100%; */
+}
+
+#create_post .form_error_message {
+    margin: 0 1rem;
+}
+
+#create_post .create_post_container {
+    /* max-width:  500px; */
+    margin: auto;
+    padding: 1rem;
+}
+#create_post .create_post_form {
+    padding: 1rem;
+}
+
+#create_post .create_post_form .btn_category {
+    width: 70px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ql-editor {
+    overflow: scroll;
+    background: #fff;
+    height: 10rem !important;
+}
+
+@media screen and (max-width:640px) {
+    #create_post {
+    padding: 6rem 0 5rem 0;
+  }
+
+  #create_post .create_post_container {
+    margin: 0;
+    /* width: 100%; */
+    overflow: auto;
+  }
+
+  #create_post .create_post_form {
+    /* width: 100%; */
+    margin: 0;
+  }
+}

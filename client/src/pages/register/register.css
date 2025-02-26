@@ -1,0 +1,23 @@
+
+#register {
+    width: 100%;
+}
+
+.register_wrapper {
+    width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+    #register {
+        padding: 6rem 0 5rem 0;
+    }
+
+    .register_wrapper {
+        width: 100%;
+        padding: 1rem 3rem;
+    }
+
+    .register_form {
+        width: 100%;
+    }
+}
