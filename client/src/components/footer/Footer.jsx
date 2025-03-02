@@ -7,8 +7,8 @@ function Footer() {
     <footer>
       <ul className='footer_wrapper'>
         <li><Link to="posts/categories/Agriculture">Agriculture</Link></li>
-        <li><Link to="/posts/categories/Education">Education</Link></li>
-        <li><Link to="/posts/categories/Politics">Politics</Link></li>
+        <li><Link to="posts/categories/Education">Education</Link></li>
+        <li><Link to="posts/categories/Tourism">Tourism</Link></li>
         <li><Link to="/posts/categories/Festival">Festival</Link></li>
         <li><Link to="/posts/categories/Entertainment">Entertainment</Link></li>
         <li><Link to="/posts/categories/Art">Art</Link></li>

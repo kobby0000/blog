@@ -3,6 +3,7 @@ import "./home.css";
 import Post from '../../components/post/Post';
 import PostItem from '../../components/postitem/PostItem';
 import LatestPostItems from '../../components/latestpostsitems/LatestPostItems';
+import RandomCartegories from '../../components/randomCartigories/RandomCartegories';
 import Loader from '../../components/loader/Loader';
 import axios from 'axios';
 
@@ -19,7 +20,7 @@ function Home() {
         // Ensure posts are sorted by date (newest first) before slicing the first 5
         const sortedPosts = response?.data
           ?.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) // Sorting
-          .slice(0, 5); // Get only the latest 5
+          .slice(0, 3); // Get only the latest 5
 
         setLatestPosts(sortedPosts || []);
       } catch (err) {
@@ -38,9 +39,15 @@ function Home() {
 
   return (
     <div id='home'>
+      <div className="container home_wapper">
+
       {/* Full blog posts section */}
       <div className="left">
+      <RandomCartegories />
+      <div className="all_posts">
+        <p>All Posts</p>
       <Post />
+      </div>
       </div>
 
       <article className='right'>
@@ -64,8 +71,7 @@ function Home() {
           <h2 className="center">No Posts Found</h2>
         )}
       </article>
-
-      
+      </div>    
     </div>
   );
 }

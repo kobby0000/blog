@@ -1,7 +1,12 @@
 
+.new_posts {
+  display: flex;
+  flex-direction: column;
+}
+
 .new_posts_wrapper {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
   justify-content: center;
   margin-left: auto;
@@ -10,30 +15,33 @@
   
 .new_posts {
     background-color: white;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     transition: var(--transition);
     cursor: pointer;
+    margin: 1rem 0;
+    border-radius: 1rem;
 }
 
 .new_posts:hover,
 .new_posts:focus {
-    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 .3rem .5rem rgba(80, 80, 80, 0.1);
 }
 
 .new_posts .new_posts_img {
     overflow: hidden;
     max-height: 20rem;
+    border-radius: 1rem;
 }
 
 .new_posts .new_posts_img img {
     max-width: 300px;
-    height: 200px;
+    height: 100px;
     object-fit: cover;
     object-position: center center;
 }
 
 .new_posts_content {
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     padding: 0 1rem;
 }
 
@@ -46,6 +54,7 @@
     /* flex-direction: column; */
     justify-content: flex-start;
     align-items: flex-end;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-top: .5rem;
     padding: 0 1rem;
@@ -54,16 +63,26 @@
 
  /* =========== MEDIA QUERY ========== */
 
-@media screen and (max-width:900px) {
-    .new_posts_wrapper {
+@media screen and (max-width:800px) {
+   .latests_posts {
+     padding-bottom: 0;
+   }
+
+    .latests_posts  .new_posts_wrapper {
       max-width: 98%;
+      display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
     }
+
+    .new_posts {
+      display: flex;
+      flex-direction: row;
+  }
   
-    .new_posts .new_posts_img img {
+    .latests_posts .new_posts_img img {
       width: 100%;
-      max-height: 30rem;
+      height: 10rem;
   }
   }
 
@@ -75,19 +94,13 @@
     .new_posts_wrapper {
       grid-template-columns: 1fr;
     }
-
-    .new_posts {
-        display: flex;
-        flex-direction: row;
-    }
   
     .new_posts .new_posts_img img {
       width: 200px;
-      height: 10rem;
+      min-height: fit-content;
     }
 
     .new_posts_content {
-        margin-top: 1rem;
         padding: 0 1rem;
         /* display: flex;
         flex-direction: column;
@@ -99,5 +112,6 @@
         flex-direction: column;
         align-items: flex-start;
         gap: .5rem;
+        padding-bottom: 1rem;
     }
   }

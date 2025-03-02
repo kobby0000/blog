@@ -1,16 +1,16 @@
 import React from 'react';
-import "./latestPostItems.css";
+import "./randomCategoriesItems.css";
 import { Link } from 'react-router-dom';
 import PostAuthor from "../../components/postauthor/PostAuthor";
 
-function LatestPostItems({ postID, category, title="", thumbnail, description="", authorID, createdAt }) {
+function RandomCategoriesItems({ postID, category, title="", thumbnail, description="", authorID, createdAt }) {
     const shortDescription = description.length > 100 ? description.substr(0, 100) + "..." : description;
     const shortTitle = title.length > 30 ? title.substr(0, 30) + "..." : title;
 
   return (
-    <article className='new_posts latests_posts'>
+    <article className='new_posts random_cartegories_items'>
             <Link to={`/posts/${postID}`}>
-            <div className="new_posts_img">
+            <div className="image_wrapper new_posts_img">
                 <img src={`${process.env.REACT_APP_ASSETS_URL}/uploads/${thumbnail}`} alt={title}  loading="lazy"/>
             </div>
             </Link>
@@ -19,9 +19,9 @@ function LatestPostItems({ postID, category, title="", thumbnail, description=""
                 <Link to={`/posts/${postID}`} className='post_author'>
                     <h3>{shortTitle}</h3>
                 </Link>
-                {/* <Link to={`/posts/${postID}`}>
+                <Link to={`/posts/${postID}`}>
                 <p dangerouslySetInnerHTML= {{__html: shortDescription}}/>
-                </Link> */}
+                </Link>
             </div>
             <div className="new_posts_footer">
                 <PostAuthor authorID={authorID} createdAt={createdAt} />
@@ -32,4 +32,4 @@ function LatestPostItems({ postID, category, title="", thumbnail, description=""
   )
 }
 
-export default LatestPostItems
+export default RandomCategoriesItems;

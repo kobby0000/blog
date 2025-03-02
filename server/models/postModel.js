@@ -2,7 +2,8 @@ const {Schema, model} = require('mongoose')
 
 const postSchema = new Schema({
     title: {type: String, required: true},
-    category: {type: String, enum: ['Agriculture','Business','Education','Entertainment','Art','Politics','Uncategorized','Projects','Festival'], message:'{VALUE} is not supported'},
+    category: {type: String, enum: ['Uncategorized','Agriculture','Tourism',
+    'Business','Education','Spirituality','Festival','Entertainment','Art','Projects','How To','Features'], message:'{VALUE} is not supported'},
     description: {type: String, required: true},
     creator: {type: Schema.Types.ObjectId,ref:'User'},
     thumbnail: {type: String, required: true},

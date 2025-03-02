@@ -3,10 +3,23 @@
 }
 
 #post_details .post_details_wrapper {
-    width: 70%;
+    /* max-width: 100%; */
     background-color: #fff;
     margin-inline: auto;
     padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+#post_details .post_details_wrapper .left{
+    width: 80%;
+}
+
+#post_details .post_details_wrapper .right{
+    width: 20%;
 }
 
 .post_details_header {
@@ -42,14 +55,29 @@
     color: var(--text_color);
 }
 
-.post_details_buttons a:nth-child(2){
+.post_details_buttons a:nth-child(2):hover,
+.post_details_buttons a:nth-child(2):focus {
+    background-color: #fff;
     color: var(--text_color);
 }
 
-.post_details_buttons a:nth-child(2):hover,
-.post_details_buttons a:nth-child(2):focus {
-    background-color: var(--primary_color);
-    color: var(--bgsoft);
+.post_details_wrapper .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: .7rem;
+    margin-top: 1.5rem;
+}
+
+.post_details_wrapper .title h1 {
+    font-size: 36px;
+    color: #000;
+}
+
+.post_details_wrapper .title .share .icon{
+    font-size: 1.7rem;
+    color: #000;
 }
 
 .post_details_img {
@@ -72,5 +100,41 @@
 
     .post_details_img {
         max-height: 25rem;
+    }
+}
+
+@media screen and (max-width:950px) {
+    #post_details .post_details_wrapper {
+        flex-direction: column;
+    }
+
+    #post_details .post_details_wrapper .left {
+        width: 100%;
+    }
+
+    #post_details .post_details_wrapper .right {
+        width: 0%;
+        flex-direction: row;
+    }
+}
+
+
+
+@media screen and (max-width:450px) {
+
+    .post_details_wrapper .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .post_details_wrapper .title h1 {
+        font-size: 34px;
+    }
+    
+    .post_details_wrapper .title .share .icon{
+        font-size: 1.5rem;
+        margin-right: .6rem;
     }
 }

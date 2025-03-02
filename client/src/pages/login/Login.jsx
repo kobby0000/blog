@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react';
 import "./login.css";
-import { Link,useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 import {UserContext} from '../../context/userContext.js';
@@ -47,7 +47,7 @@ function Login() {
           <input type="email"  placeholder='Enter Email' name="email" value={userData.email} onChange={changeInputHandler} autoFocus />
           <input type="password"  placeholder='Password' name="password" value={userData.password} onChange={changeInputHandler}/>
           <button type='submit' className='btn_category text_center '>Sign In</button>
-          <small>Dont have an account? <Link to="/register">Sign up</Link></small>
+          {/* <small>Dont have an account? <Link to="/register">Sign up</Link></small> */}
         </form>
       </div>
     </section>

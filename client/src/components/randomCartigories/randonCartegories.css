@@ -1,0 +1,9 @@
+
+@media screen and (max-width: 650px) {
+  .random_posts_wrapper {
+      max-width: 100%;
+      display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+}

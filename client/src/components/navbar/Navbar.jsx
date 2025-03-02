@@ -1,6 +1,6 @@
 import React,{useState, useContext} from 'react';
 import "./navbar.css";
-import { Link } from 'react-router-dom';
+import { NavLink,Link } from 'react-router-dom';
 // import AuthLinks from '../auth_links/AuthLinks';
 // import TheameToggle from '../themeToggle/TheameToggle';
 // import navLogo from "../../assets/logo1.png";
@@ -9,7 +9,8 @@ import instagram from "../../assets/images/instagram.png"
 import tiktok from "../../assets/images/tiktok.png";
 import utube from "../../assets/images/youtube.png" 
 import pinterest from '../../assets/images/pinterest.png'
-// import { IoClose } from "react-icons/io5";
+// import { IoClose } from "react-icons/io5";/
+import { IoClose } from "react-icons/io5";
 import navLogo from "../../assets/images/logo2.png"
 
 import { UserContext } from '../../context/userContext';
@@ -34,12 +35,12 @@ function Navbar() {
     <div>
       <div className="nav_socials ">
         <div className="nav_socials_wrapper container">
-          <a href="http://" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="Jinx Sage Facebook account" /></a>
-          <a href="http://" target="_blank" rel="noopener noreferrer"><img src={pinterest} alt="Jinx Sage pinterest account" /></a>
+          <a href="http://" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="Jinx Sage Facebook Account" /></a>
+          <a href="http://" target="_blank" rel="noopener noreferrer"><img src={pinterest} alt="Jinx Sage Pinterest Account" /></a>
           
-          <a href="http://" target="_blank" rel="noopener noreferrer"><img src={utube} alt="Jinx Sage utube account" /></a>
-          <a href="http://" target="_blank" rel="noopener noreferrer"><img src={instagram} alt="Jinx Sage instagram account" /></a>
-          <a href="http://" target="_blank" rel="noopener noreferrer"><img src={tiktok} alt="Jinx Sage TikTok account" /></a>
+          <a href="http://" target="_blank" rel="noopener noreferrer"><img src={utube} alt="Jinx Sage Youtube Account" /></a>
+          <a href="http://" target="_blank" rel="noopener noreferrer"><img src={instagram} alt="Jinx Sage Instagram Account" /></a>
+          <a href="http://" target="_blank" rel="noopener noreferrer"><img src={tiktok} alt="Jinx Sage TikTok Account" /></a>
           
           
           
@@ -50,7 +51,7 @@ function Navbar() {
       id="header" 
       className={navbar ? "active" : ""}>
         <div className={toggle ? "header_wrapper container  increase" : "header_wrapper container"}>
-          <a href="/" className='nav_logo'  onClick={( ) => setToggle(false)}>
+          <a href="/"   onClick={( ) => setToggle(false)}>
           {/* Whispers of Jinx */}
           <img src={navLogo} alt="jinx the Sage logo"  className="nav_logo" width="10" height="auto" loading="lazy"/>
           </a>
@@ -82,13 +83,13 @@ function Navbar() {
               <li onClick={( ) => setToggle(false)}>
             <Link to="/login">Login</Link>
               </li>
+              <li>
+              <Link to="/" className="btn" onClick={( ) => setToggle(false)}>
+            Contact Us
+                </Link>
+              </li>
             </ul>}
-          {/* <div className="header_right">
-              <button className="btn" onClick={( ) => setToggle(false)}>
-            <span className="btn_animate"></span>
-            <a href="#footer" className="link">Contact Us</a>
-                </button>
-          </div> */}
+          
           </div>
         <div 
         onClick={() => setToggle(!toggle)}
@@ -96,16 +97,25 @@ function Navbar() {
           <div className="bar"></div>
           <div className="bar"></div>
           <div className="bar"></div>
+          {/* <IoClose className='close'/> */}
         </div>
         </div>
       </nav>
-      <div className="nav_show container">
+      <div className="catchy container">
+        <div className="left">
+        <h1>Your Destination for Creative Knowlage and Growth </h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+      </div>
+      <div className="nav_show">
         <ul>
-          <li><a href="">Make Money Online </a></li>
-          <li><a href="">Spirituality </a></li>
-          <li><a href="">Spells </a></li>
-          <li><a href="">Product features </a></li>
-          <li><a href="">Spirituality </a></li>
+        <li><NavLink to="/"  className={({ isActive }) => (isActive ? "active" : "")}>All posts </NavLink></li>
+          <li><NavLink to="/posts/categories/Tourism"  className={({ isActive }) => (isActive ? "active" : "")}>Tourism/Hospitality </NavLink></li>
+          <li><NavLink to="/posts/categories/How-to"  className={({ isActive }) => (isActive ? "active" : "")}>Make Money Online </NavLink></li>
+          <li><NavLink to="/posts/categories/Health&Fitness"  className={({ isActive }) => (isActive ? "active" : "")}>Health&Fitness </NavLink></li>
+          <li><NavLink to="/posts/categories/Product-Features"  className={({ isActive }) => (isActive ? "active" : "")}>Product features </NavLink></li>
+          <li><NavLink to="/posts/categories/Spirituality"  className={({ isActive }) => (isActive ? "active" : "")}>Spirituality </NavLink></li>
+          <li><NavLink to="/posts/categories/Art"  className={({ isActive }) => (isActive ? "active" : "")}>Design/Art </NavLink></li>
         </ul>
       </div>
     </div>

@@ -24,8 +24,8 @@ const formats = [
 ]
 
 const POST_CATEGORIES = [
-    'Uncategorized','Agriculture',
-    'Business','Education','politics','Festival','Entertainment','Art','Projects'
+    'Uncategorized','Agriculture','Tourism',
+    'Business','Education','Spirituality','Festival','Entertainment','Art','Projects','How To','Features'
 ]
 
 
@@ -61,7 +61,7 @@ function CreatePost() {
   
     try {
       const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/posts`, postData, {withCredentials:true, headers: {Authorization: `Bearer ${token}`}})
-      if(response.status == 201) {
+      if(response.status === 201) {
         return navigate('/')
       }
     } catch (err) {

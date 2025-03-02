@@ -25,8 +25,8 @@ const formats = [
 ]
 
 const POST_CATEGORIES = [
-    'Uncategorized','Agriculture',
-    'Business','Education','politics','Festival','Entertainment','Art','Projects'
+    'Uncategorized','Agriculture','Tourism',
+    'Business','Education','Spirituality','Festival','Entertainment','Art','Projects','How To','Features'
 ]
 
 function EditPost() {

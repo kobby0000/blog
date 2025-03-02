@@ -8,7 +8,7 @@
  --head_font: 2rem;
  --head_font2: 1.5rem;
 --primary_font: 14px;
---primary_color: #8c2b5e;
+--primary_color: #720740;
 --bg_color:white;
 --bgsoft:#f0f0f0;
 --text_color: black;
@@ -16,6 +16,7 @@
 --black:#181818;
 --text_color:#4d4d4d;
 --danger:red;
+--blue_color: #0f3a91;
 --box_shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.1);;
 }
 
@@ -144,6 +145,7 @@ img {
   align-items: center;
   justify-content: center;
 }
+
 .post_wrapper,
 .posts_wrapper_author,
 .posts_wrapper_category {
