@@ -18,6 +18,11 @@
     width: 80%;
 }
 
+#post_details .left .post_details_img img {
+    object-fit: cover;
+    object-position: center center;
+}
+
 #post_details .post_details_wrapper .right{
     width: 20%;
 }
@@ -89,6 +94,14 @@
 .post_details_wrapper p {
     margin-bottom: .8rem;
     line-height: 1.7;
+}
+
+.post_details_wrapper h2{
+    border-top: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+    font-weight: 400;
+    padding: .5rem 0;
+    margin: 1.5rem 0;
 }
 
 @media screen and (max-width:1024px) {

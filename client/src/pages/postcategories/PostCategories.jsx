@@ -1,8 +1,9 @@
 import React,{useState,useEffect} from 'react';
-import PostItem from '../../components/postitem/PostItem';
+// import PostItem from '../../components/postitem/PostItem';
 import { useParams } from 'react-router-dom';
 import Loader from '../../components/loader/Loader';
 import axios from 'axios';
+const PostItem = React.lazy(() => import('../../components/postitem/PostItem'))
 
 
 function PostsCategories() {

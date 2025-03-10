@@ -34,7 +34,7 @@ function AuthorPosts() {
 
   return (
     <section id="posts">
-           {posts.length > 0 ? <div className="post_wrapper">
+           {posts.length > 0 ? <div className="post_wrapper author_posts container">
             {posts.map(({_id:id,thumbnail,category,title,description,creator,createdAt}) => 
         <PostItem
           key={id}
@@ -47,6 +47,7 @@ function AuthorPosts() {
           createdAt={createdAt}
         />
       )}
+      
             </div> : 
             <h2 className='center'>No Posts Found</h2> 
             }

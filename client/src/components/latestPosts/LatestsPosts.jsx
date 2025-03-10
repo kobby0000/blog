@@ -29,12 +29,13 @@ function LatestsPosts() {
     fetchPost();
   }, []);
 
-  if (isLoading) {
-    return <Loader />;
-  }
+  // if (isLoading) {
+  //   return <Loader />;
+  // }
 
   return (
     <section id="latest_posts">
+      <h2 className="right_title">Latest Posts</h2>
       {latestPosts.length > 0 ? (
         <div className="latest_posts_wrapper">
           {latestPosts.map(({ _id: id, thumbnail, category, title, description, creator, createdAt }) => (

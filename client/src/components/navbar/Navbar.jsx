@@ -51,23 +51,23 @@ function Navbar() {
       id="header" 
       className={navbar ? "active" : ""}>
         <div className={toggle ? "header_wrapper container  increase" : "header_wrapper container"}>
-          <a href="/"   onClick={( ) => setToggle(false)}>
+          <Link rel="canonical" to="/"   onClick={( ) => setToggle(false)}>
           {/* Whispers of Jinx */}
           <img src={navLogo} alt="jinx the Sage logo"  className="nav_logo" width="10" height="auto" loading="lazy"/>
-          </a>
+          </Link>
           
           <div className={toggle ? "links toggle" : "links"}>
            {currentUser?.id && <ul className={toggle ? "header_middle toggle" : "header_middle"}>
               <li onClick={( ) => setToggle(false)}>
             {/* <Link to="/"></Link> */}
-            <a href={`/profile/${currentUser.id}`}>{currentUser?.name}</a>
+            <Link rel="canonical" to={`/profile/${currentUser.id}`}>{currentUser?.name}</Link>
               </li>
               <li onClick={( ) => setToggle(false)}>
             {/* <Link to="#home_about"></Link> */}
-            <a href="/create">Create Post</a>
+            <Link rel="canonical" to="/create">Create Post</Link>
               </li>
               <li onClick={( ) => setToggle(false)}>
-                <a href="/authors">Authors</a>
+                <Link to="/authors">Authors</Link>
             {/* <Link to="/music_videos"></Link> */}
               </li>
               <li onClick={( ) => setToggle(false)}>
@@ -77,7 +77,7 @@ function Navbar() {
             {!currentUser?.id && <ul className={toggle ? "header_middle toggle" : "header_middle"}>
               
               <li onClick={( ) => setToggle(false)}>
-                <a href="/authors">Authors</a>
+                <Link href="/authors">Authors</Link>
             {/* <Link to="/music_videos"></Link> */}
               </li>
               <li onClick={( ) => setToggle(false)}>
@@ -104,18 +104,18 @@ function Navbar() {
       <div className="catchy container">
         <div className="left">
         <h1>Your Destination for Creative Knowlage and Growth </h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <p>Please contact us for more info.</p>
         </div>
       </div>
       <div className="nav_show">
         <ul>
-        <li><NavLink to="/"  className={({ isActive }) => (isActive ? "active" : "")}>All posts </NavLink></li>
-          <li><NavLink to="/posts/categories/Tourism"  className={({ isActive }) => (isActive ? "active" : "")}>Tourism/Hospitality </NavLink></li>
-          <li><NavLink to="/posts/categories/How-to"  className={({ isActive }) => (isActive ? "active" : "")}>Make Money Online </NavLink></li>
-          <li><NavLink to="/posts/categories/Health&Fitness"  className={({ isActive }) => (isActive ? "active" : "")}>Health&Fitness </NavLink></li>
-          <li><NavLink to="/posts/categories/Product-Features"  className={({ isActive }) => (isActive ? "active" : "")}>Product features </NavLink></li>
-          <li><NavLink to="/posts/categories/Spirituality"  className={({ isActive }) => (isActive ? "active" : "")}>Spirituality </NavLink></li>
-          <li><NavLink to="/posts/categories/Art"  className={({ isActive }) => (isActive ? "active" : "")}>Design/Art </NavLink></li>
+        <li><NavLink rel="canonical" to="/"  className={({ isActive }) => (isActive ? "active" : "")}>All posts </NavLink></li>
+          <li><NavLink rel="canonical" to="/posts/categories/Tourism"  className={({ isActive }) => (isActive ? "active" : "")}>Tourism/Hospitality </NavLink></li>
+          <li><NavLink rel="canonical" to="/posts/categories/How-to"  className={({ isActive }) => (isActive ? "active" : "")}>Make Money Online </NavLink></li>
+          <li><NavLink rel="canonical" to="/posts/categories/Health&Fitness"  className={({ isActive }) => (isActive ? "active" : "")}>Health&Fitness </NavLink></li>
+          <li><NavLink rel="canonical" to="/posts/categories/Product-Features"  className={({ isActive }) => (isActive ? "active" : "")}>Product features </NavLink></li>
+          <li><NavLink rel="canonical" to="/posts/categories/Spirituality"  className={({ isActive }) => (isActive ? "active" : "")}>Spirituality </NavLink></li>
+          <li><NavLink rel="canonical" to="/posts/categories/Art"  className={({ isActive }) => (isActive ? "active" : "")}>Design/Art </NavLink></li>
         </ul>
       </div>
     </div>

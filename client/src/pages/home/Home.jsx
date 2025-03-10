@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import "./home.css";
-import Post from '../../components/post/Post';
-import PostItem from '../../components/postitem/PostItem';
-import LatestPostItems from '../../components/latestpostsitems/LatestPostItems';
+// import Post from '../../components/post/Post';
+// import PostItem from '../../components/postitem/PostItem';
+// import LatestPostItems from '../../components/latestpostsitems/LatestPostItems';
 import RandomCartegories from '../../components/randomCartigories/RandomCartegories';
 import Loader from '../../components/loader/Loader';
 import axios from 'axios';
+const LatestPostItems = React.lazy(() => import('../../components/latestpostsitems/LatestPostItems'));
+const Post = React.lazy(() => import('../../components/post/Post'))
 
 function Home() {
   const [latestPosts, setLatestPosts] = useState([]);

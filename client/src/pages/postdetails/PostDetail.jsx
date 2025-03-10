@@ -7,12 +7,14 @@ import DeletePost from '../../pages/deletepost/DeletePost';
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import LatestPosts from '../../components/latestPosts/LatestsPosts';
+// import LatestPosts from '../../components/latestPosts/LatestsPosts';
 import { UserContext } from '../../context/userContext';
 import axios from 'axios';
+import { Helmet } from 'react-helmet';
 
+const LatestPosts = React.lazy(() => import('../../components/latestPosts/LatestsPosts'))
 
-function PostDetail() {
+function PostDetail({description="" }) {
   const {id} = useParams()
   const [post, setPost] = useState(null)
   const [creatorID, setCreatorID] = useState(null);
@@ -45,9 +47,15 @@ function PostDetail() {
   if(isLoading) {
     return<Loader/>
   }
+  const shortDescription = description.length > 100 ? description.substr(0, 100) + "..." : description;
 
   return (
     <section id="post_details">
+      {/* <Helmet>
+        <title>{post.title} | JinxSage</title>
+        <meta name="description" content={post.shortDescription} /> */}
+        {/* <meta name="keywords" content={post.keywords} /> */}
+      {/* </Helmet> */}
       {error && <p className='error'>{error}</p>}
       {post && <div className="container post_details_wrapper">
       <div className='left'>
@@ -75,7 +83,6 @@ function PostDetail() {
         <p dangerouslySetInnerHTML={{__html: post.description}}></p>
         </div>
         <div className="right">
-          <p>Latests Posts</p>
           <LatestPosts />
         </div>
       </div>}

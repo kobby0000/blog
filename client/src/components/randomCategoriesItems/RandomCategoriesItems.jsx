@@ -8,24 +8,24 @@ function RandomCategoriesItems({ postID, category, title="", thumbnail, descript
     const shortTitle = title.length > 30 ? title.substr(0, 30) + "..." : title;
 
   return (
-    <article className='new_posts random_cartegories_items'>
-            <Link to={`/posts/${postID}`}>
+    <article className=' random_cartegories_items'>
+            <Link rel="canonical" to={`/posts/${postID}`}>
             <div className="image_wrapper new_posts_img">
                 <img src={`${process.env.REACT_APP_ASSETS_URL}/uploads/${thumbnail}`} alt={title}  loading="lazy"/>
             </div>
             </Link>
             <div className="new_posts_content_wrapper">
             <div className="new_posts_content">
-                <Link to={`/posts/${postID}`} className='post_author'>
+                <Link rel="canonical" to={`/posts/${postID}`} className='post_author'>
                     <h3>{shortTitle}</h3>
                 </Link>
-                <Link to={`/posts/${postID}`}>
+                <Link  to={`/posts/${postID}`}>
                 <p dangerouslySetInnerHTML= {{__html: shortDescription}}/>
                 </Link>
             </div>
             <div className="new_posts_footer">
                 <PostAuthor authorID={authorID} createdAt={createdAt} />
-                <Link to={`/posts/categories/${category}`} className='btn_category'>{category}</Link>
+                <Link rel="canonical" to={`/posts/categories/${category}`} className='btn_category'>{category}</Link>
             </div>
             </div>
         </article>

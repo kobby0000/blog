@@ -9,17 +9,17 @@ function PostItem({ postID, category, title="", thumbnail, description="", autho
 
     return (
         <article className='post'>
-            <Link to={`/posts/${postID}`}>
+            <Link rel="canonical" to={`/posts/${postID}`}>
             <div className="post_img">
                 <img src={`${process.env.REACT_APP_ASSETS_URL}/uploads/${thumbnail}`} alt={title} />
             </div>
             </Link>
             <div className="post_content_wrapper">
             <div className="post_content">
-                <Link to={`/posts/${postID}`} className='post_author'>
+                <Link rel="canonical" to={`/posts/${postID}`} className='post_author'>
                     <h3>{shortTitle}</h3>
                 </Link>
-                <Link to={`/posts/${postID}`}>
+                <Link rel="canonical" to={`/posts/${postID}`}>
                 <p dangerouslySetInnerHTML= {{__html: shortDescription}}/>
                 </Link>
             </div>

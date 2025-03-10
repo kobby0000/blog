@@ -1,4 +1,12 @@
 
+#random_posts .random_posts_wrapper{
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+   /* ======= MEDIA QUERY ======= */
 @media screen and (max-width: 650px) {
   .random_posts_wrapper {
       max-width: 100%;

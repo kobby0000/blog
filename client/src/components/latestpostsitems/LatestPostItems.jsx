@@ -9,14 +9,14 @@ function LatestPostItems({ postID, category, title="", thumbnail, description=""
 
   return (
     <article className='new_posts latests_posts'>
-            <Link to={`/posts/${postID}`}>
+            <Link rel="canonical" to={`/posts/${postID}`}>
             <div className="new_posts_img">
                 <img src={`${process.env.REACT_APP_ASSETS_URL}/uploads/${thumbnail}`} alt={title}  loading="lazy"/>
             </div>
             </Link>
             <div className="new_posts_content_wrapper">
             <div className="new_posts_content">
-                <Link to={`/posts/${postID}`} className='post_author'>
+                <Link rel="canonical" to={`/posts/${postID}`} className='post_author'>
                     <h3>{shortTitle}</h3>
                 </Link>
                 {/* <Link to={`/posts/${postID}`}>
@@ -25,7 +25,7 @@ function LatestPostItems({ postID, category, title="", thumbnail, description=""
             </div>
             <div className="new_posts_footer">
                 <PostAuthor authorID={authorID} createdAt={createdAt} />
-                <Link to={`/posts/categories/${category}`} className='btn_category'>{category}</Link>
+                <Link rel="canonical" to={`/posts/categories/${category}`} className='btn_category'>{category}</Link>
             </div>
             </div>
         </article>
