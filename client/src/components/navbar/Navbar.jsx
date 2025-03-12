@@ -16,7 +16,7 @@ import navLogo from "../../assets/images/logo2.png"
 import { UserContext } from '../../context/userContext';
 
 
-function Navbar() {
+function Navbar({ postID, category, title="", thumbnail, description="", authorID, createdAt }) {
   const [toggle, setToggle] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const {currentUser} = useContext(UserContext)
@@ -110,8 +110,8 @@ function Navbar() {
       <div className="nav_show">
         <ul>
         <li><NavLink rel="canonical" to="/"  className={({ isActive }) => (isActive ? "active" : "")}>All posts </NavLink></li>
-          <li><NavLink rel="canonical" to="/posts/categories/Tourism"  className={({ isActive }) => (isActive ? "active" : "")}>Tourism/Hospitality </NavLink></li>
-          <li><NavLink rel="canonical" to="/posts/categories/How-to"  className={({ isActive }) => (isActive ? "active" : "")}>Make Money Online </NavLink></li>
+          <li><NavLink rel="canonical" to="/posts/categories/Tourism&Hospitality"  className={({ isActive }) => (isActive ? "active" : "")}>Tourism/Hospitality </NavLink></li>
+          <li><NavLink rel="canonical" to="/posts/categories/How%20To"  className={({ isActive }) => (isActive ? "active" : "")}>Make Money Online </NavLink></li>
           <li><NavLink rel="canonical" to="/posts/categories/Health&Fitness"  className={({ isActive }) => (isActive ? "active" : "")}>Health&Fitness </NavLink></li>
           <li><NavLink rel="canonical" to="/posts/categories/Product-Features"  className={({ isActive }) => (isActive ? "active" : "")}>Product features </NavLink></li>
           <li><NavLink rel="canonical" to="/posts/categories/Spirituality"  className={({ isActive }) => (isActive ? "active" : "")}>Spirituality </NavLink></li>

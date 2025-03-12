@@ -43,11 +43,7 @@ function RandomCartegories() {
 
   return (
     <section id="latest_posts">
-      {isLoading ? (
-        <Loader />
-      ) : error ? (
-        <h2 className="center error-message">{error}</h2>
-      ) : posts.length > 0 ? (
+      {posts.length > 0 ? (
         <div className="random_posts_wrapper">
           {posts.map(({ _id: id, thumbnail, category, title, description, creator, createdAt }) => (
             <RandomCategoriesItems

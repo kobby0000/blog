@@ -2,12 +2,10 @@ const { SitemapStream, streamToPromise } = require('sitemap');
 const fs = require('fs');
 
 async function generateSitemap() {
-  const sitemap = new SitemapStream({ hostname: 'https://yourwebsite.com' });
+  const sitemap = new SitemapStream({ hostname: 'https://jinxsage.com/' });
 
   const urls = [
-    { url: '/', changefreq: 'daily', priority: 1.0 },
-    { url: '/posts/:id', changefreq: 'monthly', priority: 1.0 },
-    { url: '/login', changefreq: 'monthly', priority: 0.5 },
+    { url: '/home', changefreq: 'daily', priority: 1.0 },
     { url: '/profile/:id', changefreq: 'yearly', priority: 1.0 },
     { url: '/authors', changefreq: 'yearly', priority: 1.0 },
     { url: '/create', changefreq: 'yearly', priority: 0.5 },

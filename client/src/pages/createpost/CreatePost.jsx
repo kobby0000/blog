@@ -24,8 +24,8 @@ const formats = [
 ]
 
 const POST_CATEGORIES = [
-    'Uncategorized','Agriculture','Tourism',
-    'Business','Education','Spirituality','Festival','Entertainment','Art','Projects','How To','Features'
+    'Uncategorized','Agriculture','Tourism&Hospitality',
+    'Business','Education','Spirituality','Festival','Entertainment','Art','Projects','How To','Product-Features', 'Health&Fitness'
 ]
 
 

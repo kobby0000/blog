@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 // import PostItem from '../../components/postitem/PostItem';
 import { useParams } from 'react-router-dom';
-import Loader from '../../components/loader/Loader';
+// import Loader from '../../components/loader/Loader';
 import axios from 'axios';
 const PostItem = React.lazy(() => import('../../components/postitem/PostItem'))
 
@@ -28,13 +28,13 @@ function PostsCategories() {
       fetchPost();
     }, [category])
 
-    if(isLoading) {
-      return<Loader/>
-    }
+    // if(isLoading) {
+    //   return<Loader/>
+    // }
 
   return (
     <section id="posts">
-           {posts.length > 0 ? <div className="post_wrapper">
+           {posts.length > 0 ? <div className="post_wrapper container">
             {posts.map(({_id:id,thumbnail,category,title,description,creator,createdAt}) => 
         <PostItem
           key={id}

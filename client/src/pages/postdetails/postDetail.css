@@ -18,6 +18,15 @@
     width: 80%;
 }
 
+#post_details .left p { 
+    height: fit-content;
+}
+
+#post_details .left p a {
+    color: red;
+text-decoration: underline;
+}
+
 #post_details .left .post_details_img img {
     object-fit: cover;
     object-position: center center;
