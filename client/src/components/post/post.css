@@ -3,6 +3,6 @@
 }
 
 .post_wrapper{
-  max-width: 100%;
+  max-width: 90%;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }

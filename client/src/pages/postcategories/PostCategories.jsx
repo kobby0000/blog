@@ -34,7 +34,7 @@ function PostsCategories() {
 
   return (
     <section id="posts">
-           {posts.length > 0 ? <div className="post_wrapper container">
+           {posts.length > 0 ? <div className="post_wrapper categories_wrapper container">
             {posts.map(({_id:id,thumbnail,category,title,description,creator,createdAt}) => 
         <PostItem
           key={id}

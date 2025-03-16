@@ -21,6 +21,9 @@ function RandomCategoriesItems({ postID, category, title="", thumbnail, descript
                 </Link>
                 <Link  to={`/posts/${postID}`}>
                 <p dangerouslySetInnerHTML= {{__html: shortDescription}}/>
+                {/* <h1 dangerouslySetInnerHTML= {{__html: shortDescription}}/>
+                <h2 dangerouslySetInnerHTML= {{__html: shortDescription}}/>
+                <h3 dangerouslySetInnerHTML= {{__html: shortDescription}}/> */}
                 </Link>
             </div>
             <div className="new_posts_footer">

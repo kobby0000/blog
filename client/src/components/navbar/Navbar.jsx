@@ -36,11 +36,11 @@ function Navbar({ postID, category, title="", thumbnail, description="", authorI
       <div className="nav_socials ">
         <div className="nav_socials_wrapper container">
           <a href="http://" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="Jinx Sage Facebook Account" /></a>
-          <a href="http://" target="_blank" rel="noopener noreferrer"><img src={pinterest} alt="Jinx Sage Pinterest Account" /></a>
+          <a href="https://pin.it/2CgrFegL7" target="_blank" rel="noopener noreferrer"><img src={pinterest} alt="Jinx Sage Pinterest Account" /></a>
           
           <a href="http://" target="_blank" rel="noopener noreferrer"><img src={utube} alt="Jinx Sage Youtube Account" /></a>
           <a href="http://" target="_blank" rel="noopener noreferrer"><img src={instagram} alt="Jinx Sage Instagram Account" /></a>
-          <a href="http://" target="_blank" rel="noopener noreferrer"><img src={tiktok} alt="Jinx Sage TikTok Account" /></a>
+          <a href="http://www.tiktok.com/@jinxasha" target="_blank" rel="noopener noreferrer"><img src={tiktok} alt="Jinx Sage TikTok Account" /></a>
           
           
           

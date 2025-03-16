@@ -4,6 +4,15 @@
   flex-direction: row;
 }
 
+.seek_title {
+  border-top: 2px solid var(--black);
+  border-bottom: 2px solid var(--black);
+  font-weight: 400;
+  padding: .5rem 0;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
 
 
    /* ======= MEDIA QUERY ======= */

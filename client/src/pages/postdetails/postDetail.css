@@ -135,7 +135,10 @@ text-decoration: underline;
     }
 
     #post_details .post_details_wrapper .right {
-        width: 0%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
         flex-direction: row;
     }
 }

@@ -5,8 +5,11 @@ import PostAuthor from "../../components/postauthor/PostAuthor";
 import Loader from '../../components/loader/Loader';
 import DeletePost from '../../pages/deletepost/DeletePost';
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+// import { FaFacebookSquare } from "react-icons/fa";
+// import { FaLinkedin } from "react-icons/fa";
+import { FaPinterestSquare } from "react-icons/fa";
+import { AiFillTikTok } from "react-icons/ai";
+
 // import LatestPosts from '../../components/latestPosts/LatestsPosts';
 import { UserContext } from '../../context/userContext';
 import axios from 'axios';
@@ -72,9 +75,9 @@ function PostDetail({description="" }) {
         <div className="title">
         <h1>{post.title}</h1>
         <div className="share">
-          <Link to='/'><FaSquareXTwitter className='icon'/></Link>
-          <Link to='/'><FaFacebookSquare className='icon'/></Link>
-          <Link to='/'><FaLinkedin className='icon'/></Link>
+          <a href="https://www.tiktok.com/@jinxasha" target="_blank" rel="noopener noreferrer"><FaSquareXTwitter className='icon'/></a>
+          <a href="https://pin.it/2CgrFegL7" target="_blank" rel="noopener noreferrer"><AiFillTikTok className='icon'/></a>
+          <a href="https://pin.it/2CgrFegL7" target="_blank" rel="noopener noreferrer"><FaPinterestSquare className='icon'/></a>
         </div>
         </div>
         <div className="post_details_img">

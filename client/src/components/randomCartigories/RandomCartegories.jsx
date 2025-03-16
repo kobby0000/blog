@@ -43,6 +43,7 @@ function RandomCartegories() {
 
   return (
     <section id="latest_posts">
+    <h2 className="seek_title">Seek Posts</h2>
       {posts.length > 0 ? (
         <div className="random_posts_wrapper">
           {posts.map(({ _id: id, thumbnail, category, title, description, creator, createdAt }) => (
