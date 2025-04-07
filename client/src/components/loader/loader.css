@@ -1,6 +1,6 @@
 .loader_image {
     background-color: rgba(244, 244, 244, .3);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;

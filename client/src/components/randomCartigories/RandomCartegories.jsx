@@ -24,12 +24,15 @@ function RandomCartegories() {
           // Randomly select three categories
           const randomCategories = uniqueCategories
             .sort(() => 0.5 - Math.random()) // Shuffle categories
-            .slice(1, 3); // Pick first 3
+            .slice(0, 3); // Pick first 3 categories
 
           // Filter posts that match the selected categories
           const filteredPosts = allPosts.filter(post => randomCategories.includes(post.category));
 
-          setPosts(filteredPosts);
+          // Shuffle the filtered posts and pick the first 3
+          const randomPosts = filteredPosts.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+          setPosts(randomPosts);
         }
       } catch (err) {
         setError("Failed to load posts. Please try again later.");
@@ -43,8 +46,12 @@ function RandomCartegories() {
 
   return (
     <section id="latest_posts">
-    <h2 className="seek_title">Seek Posts</h2>
-      {posts.length > 0 ? (
+      <h2 className="seek_title">Seek Posts</h2>
+      {isLoading ? (
+        <Loader />
+      ) : error ? (
+        <h2 className="center">{error}</h2>
+      ) : posts.length > 0 ? (
         <div className="random_posts_wrapper">
           {posts.map(({ _id: id, thumbnail, category, title, description, creator, createdAt }) => (
             <RandomCategoriesItems

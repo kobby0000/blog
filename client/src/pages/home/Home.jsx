@@ -47,7 +47,7 @@ function Home() {
       <div className="left">
       <RandomCartegories />
       <div className="all_posts">
-        <p>All Posts</p>
+        <h2 className='all_posts_title'>All Posts</h2>
       <Post />
       </div>
       </div>

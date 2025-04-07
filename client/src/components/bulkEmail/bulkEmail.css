@@ -1,0 +1,84 @@
+.bulk_email {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .bulk_email h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #111827;
+    text-align: center;
+  }
+
+  .bulk_email input {
+    margin: 20px 0 30px  0;
+  }
+
+  .react_quill{
+    margin: 20px 0;
+  }
+  
+  .bulk_email .email_list {
+    margin: 20px 0;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #f9fafb;
+  }
+  
+  .bulk_email .email_list p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #374151;
+  }
+  
+  .bulk_email .form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+ .bulk_email input[type="text"],
+ .bulk_email textarea {
+    padding: 12px 16px;
+    font-size: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.2s ease;
+  }
+  
+  .bulk_email input[type="text"]:focus,
+  .bulk_email textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+  
+  .bulk_email textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .bulk_email button {
+    padding: 12px 20px;
+    font-size: 15px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .bulk_email button:hover {
+    background-color: #1e40af;
+  }
+  

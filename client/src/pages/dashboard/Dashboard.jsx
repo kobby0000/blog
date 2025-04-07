@@ -6,6 +6,7 @@ import {UserContext} from '../../context/userContext';
 import axios from 'axios';
 import Loader from '../../components/loader/Loader';
 import DeletePost from '../deletepost/DeletePost';
+import BulkEmail from '../../components/bulkEmail/BulkEmail';
 
 function Dashboard() {
 const [posts, setPosts] = useState([])
@@ -66,6 +67,7 @@ const {id} = useParams();
         </div>
         : <h1 className='text_center'>You have no post yet!</h1>
       }
+      <BulkEmail />
     </section>
   )
 }

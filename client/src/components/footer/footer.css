@@ -5,6 +5,7 @@ footer {
 
 .footer_wrapper {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 1rem;
@@ -36,10 +37,10 @@ footer {
 
 @media screen and (max-width:890px) {
 
-    .footer_wrapper {
+    /* .footer_wrapper {
         flex-direction: column;
         gap: 1rem;
-      }
+      } */
       
       .footer_wrapper li{
         margin-bottom: 1rem;

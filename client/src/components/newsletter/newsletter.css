@@ -1,0 +1,129 @@
+.popup_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+   
+  }
+  
+  .popup_content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    /* border-radius: 8px; */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+    animation: mymove 500ms forwards;
+  }
+
+  @keyframes mymove {
+   0% {transform:translateY(-200px); opacity: 0;}
+    75% {transform:translateY(-100px); opacity: .5;}
+    100% {transform:translateY(0px); opacity: 1;}
+  }
+
+  .popup_content h2 {
+    text-align: center;
+    font-weight: 400;
+    color: var(--primary_color);
+  }
+
+  .newsletter_form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .newsletter_form input{
+    width: 250px;
+    height: 30px;
+    border: 1px solid var(--primary_color);
+    padding: 0.5rem;
+    color: #666;
+    margin: .4rem auto;
+  }
+
+  .newsletter_form input:focus {
+    outline: 0;
+    box-shadow: inset;
+  }
+  
+  .close_button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    color: var(--primary_color);
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: .5rem;
+  }
+  
+  /* .close_button:hover {
+    background-color: #0056b3;
+  } */
+
+  .subscribe_button {
+    text-align: center;
+    border: 0;
+    outline: 0;
+    margin: auto;
+    cursor: pointer;
+    padding: 1rem 1.3rem;
+    background-color: var(--primary_color);
+    border: 1px solid var(--primary_color);
+    color: #fff;
+    transition: 300ms ease-in-out;
+    border: 1px solid var(--primary_color);
+  }
+
+  .subscribe_button:hover,
+  .subscribe_button:focus {
+    background-color: #fff;
+    color: var(--primary_color);
+  }
+
+  .error_message {
+    color: red;
+    font-weight: 300;
+  }
+
+  .success_message {
+    font-weight: 300;
+  }
+
+  .success_message p{
+    margin: .7rem auto;
+  }
+
+
+  /* ======= MEDIA QUERY ======= */
+  @media screen and (max-width: 400px) {
+    .popup_overlay {
+      width: 100vw;
+    }
+    
+    .popup_content {
+      width: 350px;
+      text-align: center;
+      padding-top: 2rem;
+    }
+  }

@@ -33,7 +33,7 @@ function Post() {
   return (
     <section id="posts">
            {posts.length > 0 ? <div className="post_wrapper">
-            {posts.map(({_id:id,thumbnail,category,title,description,creator,createdAt}) => 
+            {posts.slice(0, 12).map(({_id:id,thumbnail,category,title,description,creator,createdAt}) => 
         <PostItem
           key={id}
           postID={id}

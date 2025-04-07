@@ -25,6 +25,8 @@ import {
   Dashboard,
 } from "./pages/index";
 import UserProvider from "./context/userContext";
+import ScrollToTop from "./components/scrollToTop/scrollToTop";
+import Newsletter from "./components/newsletter/Newsletter";
 
 
 const router = createBrowserRouter([
@@ -52,7 +54,10 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div className="App">
-     <RouterProvider router={router} />
+     <Newsletter/>
+     <RouterProvider router={router} >
+     <ScrollToTop />
+     </RouterProvider>
     </div>
   );
 }
