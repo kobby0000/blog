@@ -47,7 +47,7 @@ const BulkEmail = () => {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:5000/api/subscribe/send-email", {
+        const response = await fetch(`${process.env.REACT_APP_BASE_URL}/subscribe/send-email`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ subject, message }),
